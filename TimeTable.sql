@@ -13,9 +13,7 @@ CREATE TABLE Tanarok (
 -- Tantárgyak tábla
 CREATE TABLE Tantargyak (
     ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    Nev VARCHAR(100) NOT NULL,
-    TanarID INT UNSIGNED,
-    FOREIGN KEY (TanarID) REFERENCES Tanarok(ID) ON DELETE CASCADE
+    Nev VARCHAR(100) NOT NULL
 );
 
 -- Osztályok tábla
@@ -55,11 +53,11 @@ INSERT INTO Tanarok (Nev, Email) VALUES
 ('Tóth László', 'toth.laszlo@example.com');
 
 -- Tantárgyak adatok feltöltése
-INSERT INTO Tantargyak (Nev, TanarID) VALUES
-('Matematika', 1),
-('Fizika', 2),
-('Biológia', 3),
-('Kémia', 1);
+INSERT INTO Tantargyak (Nev) VALUES
+('Matematika'),
+('Fizika'),
+('Biológia'),
+('Kémia');
 
 -- Osztályok adatok feltöltése
 INSERT INTO Osztalyok (Nev, Evfolyam) VALUES
